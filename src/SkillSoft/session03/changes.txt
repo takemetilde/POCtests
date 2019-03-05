@@ -1,0 +1,39 @@
+1. I completed the scripts.js file to include several validation checks:
+		a. check the name for numeric values
+		b. check the name for a value less than 3 characters long
+		c. weight field cannot contain anything other than a numeric value
+		d. weight field cannot be blank
+
+2. Added a class to show the error messages smaller and red in color
+
+.errorMessages{
+	font-size:.7em;
+	color:red;
+}
+
+3. In the enterdata.html file where I had the two span tags, add the errorMessages class
+<input id="empName" /><span id="emptyName" class="errorMessages"></span>
+
+4. In the template files, so basically all html files, I changed the bottom right section to display healthy recipes. each recipe is a link so i had to also add a style to make they display as a block 
+					<section>
+						<h4>Healthy Recipes</h4>
+						<a href="">grilled chicken</a>
+						<a href="">minced beef patties</a>
+						<a href="">potato pancakes</a>
+						<a href="">fish stew</a>
+					</section>
+					
+5. This will style the above section
+
+aside section a{
+	display:block;
+	padding: 6px;
+	border-bottom: 1px solid lightgray;
+	color:black;
+}
+
+6. In the enterdata.html page, where I had copied the code to change the background color on hover, I changed the code to reflect on focus instead. The opposite will be the blur event.
+let inputTags = document.getElementsByTagName('input'); 
+for(let i = 0; i < inputTags.length; i++) { 
+	inputTags[i].addEventListener('focus', function(){ 
+		this.style.backgroundColor='lightyellow';}, false); 
